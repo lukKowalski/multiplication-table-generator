@@ -13,17 +13,14 @@ function App() {
   const [amount, setAmount] = useState(40);
   const [perPage, setPerPage] = useState(4);
 
-  console.log(type);
-
   return (
     <div className="App">
-      <Container className="mt-3">
+      <Container className="controls-section mt-3">
         <Row>
           <Col><h1>Generator tabliczki mnozenia</h1></Col>
         </Row>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Row>
               <Col>
                 <Form.Control 
                   as="select"
@@ -72,16 +69,17 @@ function App() {
                   <option value={4}>4 Zestawy na stronę</option>
                 </Form.Control>
               </Col>
-            </Row>
           </Form.Group>
         </Form>
       </Container>
-      <PrintTables 
-        type={type} 
-        max={max} 
-        amount={amount} 
-        perPage={perPage} 
-      />
+      <Container>
+        <PrintTables 
+          type={type} 
+          max={max} 
+          amount={amount} 
+          perPage={perPage} 
+        />
+      </Container>
     </div>
   );
 }
