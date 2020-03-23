@@ -3,8 +3,7 @@ import './App.css';
 import { PrintTables } from "./PrintTables";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Container, Row, Col, Form, Jumbotron } from 'react-bootstrap';
-import { Alert } from 'react-bootstrap';
+import { Container, Row, Col, Form, Alert, Button } from 'react-bootstrap';
 
 
 
@@ -78,7 +77,7 @@ function App() {
         </Form>
         <Row>
           <Col>
-            <Alert variant="info">Wciśnij Ctrl + P aby uzyskać wersję do druku</Alert>
+            <Alert variant="info">Wciśnij Ctrl + P aby uzyskać wersję do druku, lub wciśnij ten przycisk: <Button size="sm" onClick={window.print} variant="secondary">Drukuj</Button></Alert>
           </Col>
         </Row>
       </Container>
