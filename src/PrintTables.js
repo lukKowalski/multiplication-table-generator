@@ -4,18 +4,11 @@ import { Row, Col, Container } from "react-bootstrap";
 
 const DivRow = ({ pair }) => {
     const result = pair[0] * pair[1];
-    const divPair = Math.random() > 0.5 ? [
-        result,
-        pair[0]
-    ] : [
-        result,
-        pair[1]
-    ];
 
     return <tr>
-        <td>{divPair[0]}</td>
+        <td>{result}</td>
         <td>/</td>
-        <td>{divPair[1]}</td>
+        <td>{pair[0]}</td>
         <td>=</td>
         <td className="result-box"></td>
     </tr>
@@ -23,7 +16,7 @@ const DivRow = ({ pair }) => {
 
 const MulRow = ({ pair }) => <tr>
     <td>{pair[0]}</td>
-    <td>*</td>
+    <td>⋅</td>
     <td>{pair[1]}</td>
     <td>=</td>
     <td className="result-box"></td>
