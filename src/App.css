@@ -3,6 +3,10 @@
   border-radius: 10px;
 }
 
+.set-name {
+  border-bottom: 1px dotted black;
+}
+
 .default-table {
   width: 100px;
 }

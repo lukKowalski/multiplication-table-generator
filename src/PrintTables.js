@@ -41,10 +41,10 @@ const ItemsTable = ({ pairs, type }) => <table className="default-table">
 </table>
 
 const Set = ({ type, list }) => <Row>
-    <Col md={4}>
+    <Col md={5}>
         <ItemsTable pairs={list.slice(0, list.length/2)} type={type === "divOnly" ? "div" : "mul"} />
     </Col>
-    <Col md={4}>
+    <Col md={5}>
         <ItemsTable pairs={list.slice(list.length/2)} type={type === "mulOnly" ? "mul" : "div"} />
     </Col>
 </Row>
@@ -53,19 +53,43 @@ export const PrintTables = ({ type, max, amount, perPage }) => {
     return <Container>
         <Row>
             <Col md={6}>
+                <Row>
+                    <Col><h5 className="set-name">Zestaw 1</h5></Col>
+                </Row>
                 <Set list={generateList(max, amount)} type={type}/>
             </Col>
-            <Col md={6}>
-                {perPage > 1 ? <Set list={generateList(max, amount)} type={type}/> : null}
-            </Col>
+            {
+                perPage > 1 ?
+                <Col md={6}>
+                    <Row>
+                        <Col><h5 className="set-name">Zestaw 2</h5></Col>
+                    </Row>
+                    {perPage > 1 ? <Set list={generateList(max, amount)} type={type}/> : null}
+                </Col> :
+                null
+            }
         </Row>
         <Row className="mt-5">
-            <Col md={6}>
-                {perPage > 2 ? <Set list={generateList(max, amount)} type={type}/> : null}
-            </Col>
-            <Col md={6}>
-                {perPage > 3 ? <Set list={generateList(max, amount)} type={type}/> : null}
-            </Col>
+            {
+                perPage > 2 ?
+                <Col md={6}>
+                    <Row>
+                        <Col><h5 className="set-name">Zestaw 3</h5></Col>
+                    </Row>
+                    {perPage > 1 ? <Set list={generateList(max, amount)} type={type}/> : null}
+                </Col> :
+                null
+            }
+            {
+                perPage > 3 ?
+                <Col md={6}>
+                    <Row>
+                        <Col><h5 className="set-name">Zestaw 4</h5></Col>
+                    </Row>
+                    {perPage > 1 ? <Set list={generateList(max, amount)} type={type}/> : null}
+                </Col> :
+                null
+            }
         </Row>
     </Container>
 }
