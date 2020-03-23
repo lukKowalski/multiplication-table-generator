@@ -45,7 +45,7 @@ const Set = ({ type, list }) => <Row>
 export const PrintTables = ({ type, max, amount, perPage }) => {
     return <Container>
         <Row>
-            <Col md={6}>
+            <Col md={5}>
                 <Row>
                     <Col><h5 className="set-name">Zestaw 1</h5></Col>
                 </Row>
@@ -53,7 +53,7 @@ export const PrintTables = ({ type, max, amount, perPage }) => {
             </Col>
             {
                 perPage > 1 ?
-                <Col md={6}>
+                <Col md={5}>
                     <Row>
                         <Col><h5 className="set-name">Zestaw 2</h5></Col>
                     </Row>
@@ -65,7 +65,7 @@ export const PrintTables = ({ type, max, amount, perPage }) => {
         <Row className="mt-5">
             {
                 perPage > 2 ?
-                <Col md={6}>
+                <Col md={5}>
                     <Row>
                         <Col><h5 className="set-name">Zestaw 3</h5></Col>
                     </Row>
@@ -75,7 +75,7 @@ export const PrintTables = ({ type, max, amount, perPage }) => {
             }
             {
                 perPage > 3 ?
-                <Col md={6}>
+                <Col md={5}>
                     <Row>
                         <Col><h5 className="set-name">Zestaw 4</h5></Col>
                     </Row>

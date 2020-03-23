@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Container className="controls-section mt-3 p-4">
+      <Container className="controls-section mt-3 p-4 mb-4">
         <Row>
           <Col>
             <h4>Generator tabliczki mnozenia</h4>
@@ -81,7 +81,7 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <Container className="mt-5">
+      <Container>
         <PrintTables 
           type={type} 
           max={max} 
